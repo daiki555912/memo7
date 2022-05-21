@@ -15,7 +15,7 @@
    memo = STDIN.read
    
    CSV.open("#{file_name}.cvs", "w") do |csv|
-   csv.puts["#{memo}"]
+   csv << [memo]
    
  end
  
@@ -29,7 +29,7 @@
      memo = STDIN.read
      
      CSV.open("#{file_name}.csv", "a") do |csv|
-     csv.puts["#{memo}"]
+     csv << [memo]
   end
      
  else
