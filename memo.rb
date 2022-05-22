@@ -14,7 +14,7 @@
    puts "メモ内容を記載してください。Ctrl+Dで保存します。"
    memo = STDIN.read
    
-   CSV.open("#{file_name}.cvs", "w") do |csv|
+   CSV.open("#{file_name}.csv", "w") do |csv|
     csv << ["#{memo}"]
     
    
