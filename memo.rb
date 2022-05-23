@@ -16,12 +16,13 @@
      memo_type == 2
      
      puts "既存のメモを編集します。拡張子を除いた既存のファイル名を入力して下さい。"
-     file_name = gets.to_s
+     file_name = gets.to_s.chomp
      
      puts "編集したい内容を入力して下さい。完了したらCtrl+Dを押して下さい"
      memo = STDIN.read
      
-     CSV.open("#{file_name}.csv", "a") do |csv|
+     CSV.open("#{file_name}.csv", "w") do |csv|
+      
       csv << ["#{memo}"]
   end
      
