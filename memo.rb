@@ -10,7 +10,7 @@
    CSV.open("#{file_name}.csv", "w") do |csv|
     csv << ["#{memo}"]
     
- end
+   end
  
  elsif
      memo_type == 2
@@ -24,7 +24,7 @@
      CSV.open("#{file_name}.csv", "w") do |csv|
       
       csv << ["#{memo}"]
-  end
+     end
      
  else
     puts "1か2を入力して下さい。"
